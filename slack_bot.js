@@ -79,7 +79,7 @@ var bot = controller.spawn({
     token: process.env.token
 }).startRTM()
 
-controller.hears('',['direct_message','direct_mention','mention'], function(bot, message, reply) {
+controller.hears('',['direct_message','direct_mention','mention'], function(bot, message) {
     var msg = message.text
     var responses = [
       '•silent screams•',
@@ -87,7 +87,8 @@ controller.hears('',['direct_message','direct_mention','mention'], function(bot,
       'Dreamies! :open_mouth:',
       'TICKLE STICK!!!!!!',
       'nom nom :spider:',
-      'i :heart: :package:'
+      'i :heart: :package:',
+      '•inverts•'
     ]
     var rnd = Math.floor(Math.random() * responses.length) + 0
     var reply = responses[rnd]
